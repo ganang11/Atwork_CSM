@@ -65,6 +65,10 @@ public class Login_kamar extends AppCompatActivity {
             case R.id.menu_History:
                 Toast.makeText(this, "History Sedang Dibuat", Toast.LENGTH_SHORT).show();
                 return true;
+
+            case R.id.menu_DaftarKamar:
+                Toast.makeText(this, "Daftar Kamar Sedang Dibuat", Toast.LENGTH_SHORT).show();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -81,7 +85,7 @@ public class Login_kamar extends AppCompatActivity {
                 Toast.makeText(this, "GAGAL", Toast.LENGTH_LONG).show();
             } //else
             Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
-            Intent movea = new Intent(this, Login_kamar.class);
+            Intent movea = new Intent(this, Cek_Kamar.class);
             startActivity(movea);
 
         } else {

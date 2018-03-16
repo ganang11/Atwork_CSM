@@ -39,4 +39,378 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="15sp"
+        android:id="@+id/lay_kamar"
+        android:paddingBottom="5sp">
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Kamar :"
+            android:textColor="#000"
+            android:textSize="23sp"
+            android:paddingStart="15dp"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="A054"
+            android:background="#999"
+            android:textColor="#000"
+            android:paddingStart="15sp"
+            android:textSize="23dp"
+            android:id="@+id/Nomerkamar"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="VIP"
+            android:background="#2493D1"
+            android:textColor="#fff"
+            android:paddingStart="15sp"
+            android:textSize="23dp"
+            android:id="@+id/Tipekamar"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="250dp"
+            android:id="@+id/L"
+            android:textSize="20dp"
+            android:background="#CED5DD"
+            android:textColor="#000"
+            android:text="Y" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="303dp"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@id/L"
+            android:textColor="#000"
+            android:text="T" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="22sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000"
+                    android:text="A. Kamar Mandi"
+                    android:id="@+id/R2A" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_A"
+                    android:orientation="horizontal"
+                    android:layout_alignTop="@+id/R2A"
+                    android:layout_alignStart="@+id/RGR2_B">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2A"
+                        android:layout_alignBaseline="@id/R2A"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2A"
+                        android:layout_alignBaseline="@id/R2A"
+                        android:layout_marginStart="25dp"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2A"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="B. Sapu Kamar"
+                    android:id="@+id/R2B" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_B"
+                    android:layout_below="@id/RGR2_A"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2B"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2B"
+                        android:layout_marginStart="25dp"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2B"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="C. Cek Sprei"
+                    android:id="@+id/R2C" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_C"
+                    android:layout_below="@id/RGR2_B"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2C"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2C"
+                        android:layout_marginStart="25dp"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2C"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="D. Pel Kamar"
+                    android:id="@+id/R2D" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_D"
+                    android:layout_below="@id/RGR2_C"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2D"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2D"
+                        android:layout_marginStart="25dp"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2D"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="E. Cek Alat Mandi"
+                    android:id="@+id/R2E" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_E"
+                    android:layout_below="@id/RGR2_D"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2E"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2E"
+                        android:layout_marginStart="25dp"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2E"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="F. Parfum Ruangan"
+                    android:id="@+id/R2F" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_F"
+                    android:layout_below="@id/RGR2_E"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2F"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2F"
+                        android:layout_marginStart="25dp"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2F"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="G. Tea and Coffee"
+                    android:id="@+id/R2G" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_G"
+                    android:layout_below="@id/RGR2_F"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2G"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2G"
+                        android:layout_marginStart="25dp"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/R2G"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="H. Lap Meja"
+                    android:id="@+id/R2H" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RGR2_H"
+                    android:layout_below="@id/RGR2_G"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBL_R2H"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RBTL_R2H"
+                        android:layout_marginStart="25dp"/>
+
+                </RadioGroup>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:text="Selesai"
+                    android:textSize="20sp"
+                    android:id="@+id/btn_selesai"
+                    android:layout_marginBottom="30sp"
+                    android:layout_below="@id/R2H"/>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
 </LinearLayout>

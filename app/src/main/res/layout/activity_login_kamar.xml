@@ -42,7 +42,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="120sp"
-        android:src="@drawable/atwork"
+        android:src="@drawable/logo_atwork"
         android:layout_marginTop="60dp"
         android:id="@+id/logo_isdc"/>
 

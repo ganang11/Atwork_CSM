@@ -27,7 +27,7 @@ public class Opening extends AppCompatActivity {
 
         ValueAnimator fadeAnim = ObjectAnimator.ofFloat(logoatwork, "alpha", 3f, 0f);
 
-        fadeAnim.setDuration(2000);
+        fadeAnim.setDuration(4000);
 
         fadeAnim.start();
 
