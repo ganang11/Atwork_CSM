@@ -1,12 +1,7 @@
 package com.example.app.atworkcsm;
 
 import android.app.Activity;
-import android.app.Notification;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,28 +9,24 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.zxing.client.android.Intents;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class Login_Pekerja extends AppCompatActivity {
+public class Login_kamar extends AppCompatActivity {
 
     private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login__pekerja);
-        final Activity activity = this;
-        Button T_scanpetugas = (Button) findViewById(R.id.b_scanpekerja);
+        setContentView(R.layout.activity_login_kamar);
 
+        final Activity activity = this;
+        Button T_scanpetugas = (Button) findViewById(R.id.b_scanKamar);
 
 
         T_scanpetugas.setOnClickListener(new View.OnClickListener() {
@@ -59,18 +50,25 @@ public class Login_Pekerja extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
+        menuInflater.inflate(R.menu.menu_hislog, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_config:
-                Toast.makeText(this, "Config Sedang Dibuat", Toast.LENGTH_SHORT).show();
+
+            case R.id.menu_logout:
+                Intent keluar = new Intent(this, Login_Pekerja.class);
+                startActivity(keluar);
+
+            case R.id.menu_History:
+                Toast.makeText(this, "History Sedang Dibuat", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+
+
         }
 
     }
@@ -90,4 +88,4 @@ public class Login_Pekerja extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-    }
+}
