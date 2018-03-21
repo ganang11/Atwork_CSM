@@ -18,27 +18,9 @@ public class SessionManager {
         prefs = PreferenceManager.getDefaultSharedPreferences(cntx);
     }
 
-    public void setSession(String hostIp, String hostPort) {
-        prefs.edit().putString("hostIp", hostIp).apply();
-        prefs.edit().putString("hostPort", hostPort).apply();
-    }
-
     public void removeSession() {
         prefs.edit().remove("user").apply();
         prefs.edit().remove("code").apply();
-        prefs.edit().remove("hostIp").apply();
-        prefs.edit().remove("hostPort").apply();
-    }
-
-
-    public String getHostIp() {
-        String hostIp = prefs.getString("hostIp","");
-        return hostIp;
-    }
-
-    public String getHostPort() {
-        String hostPort = prefs.getString("hostPort","");
-        return hostPort;
     }
 
     public void setUser(String user){
