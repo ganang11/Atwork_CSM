@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.app.atworkcsm.Utils.ApiUtils;
 import com.example.app.atworkcsm.Utils.AuthService;
+import com.example.app.atworkcsm.Utils.SessionManager;
 
 import org.json.JSONObject;
 
@@ -30,7 +31,7 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
     String status, message;
     EditText etUsername, etPassword;
     Button bLogin;
-
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +42,12 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
 
         bLogin.setOnClickListener(this);
 
+        sessionManager = new SessionManager(Masuk_Pekerja.this);
         progressDialog = new ProgressDialog(Masuk_Pekerja.this);
         progressDialog.setMessage("Mohon Tunggu");
     }
 
-    public void loginHandler(String username, String password) {
+    public void loginHandler(final String username, String password) {
         if (username == null || password == null) {
             dialogAlert("Masukkan Username dan Password");
             progressDialog.dismiss();
@@ -65,7 +67,6 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
                         try {
 
                             JSONObject jsonObject = new JSONObject(rawResponse.body().string());
-                            //TODO: Sampe sini...{"message": "Petugas Berhasil Login", "status": true, "username":"STAFF1"}
                             status = jsonObject.getString("status");
                             message = jsonObject.getString("message");
 
@@ -76,10 +77,12 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
                                 }
 
                                 public void onFinish() {
+                                    sessionManager.setUser(username);
                                     Toast.makeText(Masuk_Pekerja.this, message,
                                             Toast.LENGTH_LONG).show();
                                     progressDialog.dismiss();
-                                    activityTransition();
+                                    Intent movin = new Intent(Masuk_Pekerja.this, Login_Pekerja.class);
+                                    startActivity(movin);
                                     finish();
                                 }
                             }.start();
@@ -99,11 +102,6 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
                 }
             });
         }
-    }
-
-    public void activityTransition(){
-        Intent movin = new Intent(Masuk_Pekerja.this, Login_Pekerja.class);
-        startActivity(movin);
     }
 
     public void dialogAlert(String warn){

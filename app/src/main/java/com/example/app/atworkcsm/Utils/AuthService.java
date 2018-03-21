@@ -13,4 +13,7 @@ public interface AuthService {
     @POST("/login/{u}/{p}")
     Call<ResponseBody> loginData(@Path("u") String uname, @Path("p") String pass);
 
+    @POST("/absen/{u}")
+    Call<ResponseBody> userData(@Path("u") String uname);
+
 }

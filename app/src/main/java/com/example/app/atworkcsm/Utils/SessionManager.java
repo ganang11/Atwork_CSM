@@ -24,6 +24,8 @@ public class SessionManager {
     }
 
     public void removeSession() {
+        prefs.edit().remove("user").apply();
+        prefs.edit().remove("code").apply();
         prefs.edit().remove("hostIp").apply();
         prefs.edit().remove("hostPort").apply();
     }
@@ -37,5 +39,23 @@ public class SessionManager {
     public String getHostPort() {
         String hostPort = prefs.getString("hostPort","");
         return hostPort;
+    }
+
+    public void setUser(String user){
+        prefs.edit().putString("user", user).apply();
+    }
+
+    public String getUser(){
+        String user = prefs.getString("user","");
+        return user;
+    }
+
+    public void setCode(String code){
+        prefs.edit().putString("code", code).apply();
+    }
+
+    public String getCode(){
+        String code = prefs.getString("code","");
+        return code;
     }
 }
