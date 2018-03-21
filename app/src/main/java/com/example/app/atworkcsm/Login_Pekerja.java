@@ -145,7 +145,7 @@ public class Login_Pekerja extends AppCompatActivity {
 
                 }
             });
-        }
+    }
 
     public void dialogAlert(String warn){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

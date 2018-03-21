@@ -1,5 +1,6 @@
 package com.example.app.atworkcsm;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -11,17 +12,28 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.app.atworkcsm.Utils.SessionManager;
+
 public class Cek_Kamar extends AppCompatActivity implements View.OnClickListener {
-
+    SessionManager sessionManager;
     boolean doubleBackToExitPressedOnce = false;
-
+    TextView petugas;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cek__kamar);
         Button selesai = (Button) findViewById(R.id.btn_selesai);
+
+        sessionManager = new SessionManager(Cek_Kamar.this);
+        progressDialog = new ProgressDialog(Cek_Kamar.this);
+        progressDialog.setMessage("Mohon Tunggu");
+
+        petugas = (TextView) findViewById(R.id.petugas2);
+        petugas.setText(sessionManager.getUser());
 
         selesai.setOnClickListener(this);
     }
