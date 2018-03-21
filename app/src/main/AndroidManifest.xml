@@ -37,7 +37,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".Cek_Kamar" />
-        <activity android:name=".Masuk_Pekerja"></activity>
+        <activity android:name=".Masuk_Pekerja" />
+        <activity android:name=".ConfirmPekerjaan"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_confirm_pekerjaan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.app.atworkcsm.ConfirmPekerjaan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:background="#FF6C2C">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Manager :"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:paddingStart="15dp"
+            android:id="@+id/Supervisior"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Alex"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/SV"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:background="#FFFF">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Petugas :"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:paddingStart="15dp"
+            android:id="@+id/textView2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Michelangelo"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:id="@+id/petugas2"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="15sp"
+        android:id="@+id/lay_kamar"
+        android:paddingBottom="5sp">
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Kamar :"
+            android:textColor="#000"
+            android:textSize="23sp"
+            android:paddingStart="15dp"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="A054"
+            android:background="#999"
+            android:textColor="#000"
+            android:paddingStart="15sp"
+            android:textSize="23dp"
+            android:id="@+id/Nomerkamar"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="VIP"
+            android:background="#2493D1"
+            android:textColor="#fff"
+            android:paddingStart="15sp"
+            android:textSize="23dp"
+            android:id="@+id/Tipekamar"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="250dp"
+            android:id="@+id/L"
+            android:textSize="20dp"
+            android:background="#CED5DD"
+            android:textColor="#000"
+            android:text="" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="22sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000"
+                    android:text="A. Kamar Mandi"
+                    android:id="@+id/KA" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KA"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="B. Sapu Kamar"
+                    android:id="@+id/KB" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KB"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="C. Cek Sprei"
+                    android:id="@+id/KC" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KC"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="D. Pel Kamar"
+                    android:id="@+id/KD" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KD"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="E. Cek Alat Mandi"
+                    android:id="@+id/KE" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KE"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="F. Parfum Ruangan"
+                    android:id="@+id/KF" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KF"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="G. Tea and Coffee"
+                    android:id="@+id/KG" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_below="@id/KG"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:text="H. Lap Meja"
+                    android:id="@+id/KH" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:text="Selesai"
+                    android:textSize="20sp"
+                    android:id="@+id/btn_selesai"
+                    android:layout_marginBottom="30sp"
+                    android:layout_below="@id/KH"/>
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSA"-->
+                    <!--android:layout_alignTop="@+id/KA"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSB"-->
+                    <!--android:layout_alignTop="@+id/KB"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSC"-->
+                    <!--android:layout_alignTop="@+id/KC"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSD"-->
+                    <!--android:layout_alignTop="@+id/KD"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSE"-->
+                    <!--android:layout_alignTop="@+id/KE"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSF"-->
+                    <!--android:layout_alignTop="@+id/KF"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSG"-->
+                    <!--android:layout_alignTop="@+id/KG"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <!--<CheckBox-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/CB_CSH"-->
+                    <!--android:layout_alignTop="@+id/KH"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginEnd="90sp" />-->
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KA"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KA"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KB"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KB"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KC"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KC"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KD"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KD"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KE"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KE"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KF"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KF"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KG"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KG"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SP_KH"
+                    android:entries="@array/penilaian"
+                    android:layout_alignTop="@id/KH"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20sp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

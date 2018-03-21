@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Atwork CSM</string>
+
+    <string-array name="penilaian">
+        <item>Baik</item>
+        <item>Cukup</item>
+        <item>Kurang</item>
+    </string-array>
 </resources>
