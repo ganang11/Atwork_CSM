@@ -6,7 +6,7 @@ package com.example.app.atworkcsm.Utils;
 
 public class ApiUtils {
 
-    static String BASE_URL = "http://45.77.246.7/";
+    static String BASE_URL = "http://45.77.246.7:8080/";
     private ApiUtils(){
 
     }

@@ -10,7 +10,7 @@ import retrofit2.http.Path;
  */
 
 public interface AuthService {
-    @POST("/signin/{uid}")
-    Call<ResponseBody> testloginPost(@Path("uid") String postfix);
+    @POST("/login/{u}/{p}")
+    Call<ResponseBody> loginData(@Path("u") String uname, @Path("p") String pass);
 
 }

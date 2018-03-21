@@ -28,24 +28,23 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:background="#9999"
             android:id="@+id/ET_username"
             android:textSize="20sp"
             android:paddingStart="10sp"
             android:layout_margin="10sp"
             android:hint="Username"
-            style="@style/Widget.AppCompat.EditText"
+            android:inputType="text"
              />
 
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:background="#9999"
             android:layout_margin="10sp"
             android:id="@+id/ET_password"
             android:textSize="20sp"
             android:paddingStart="10sp"
             android:hint="Password"
+            android:inputType="textPassword"
             />
 
            <Button

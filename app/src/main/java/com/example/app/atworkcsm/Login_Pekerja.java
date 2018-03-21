@@ -2,6 +2,7 @@ package com.example.app.atworkcsm;
 
 import android.app.Activity;
 import android.app.Notification;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.app.atworkcsm.Utils.AuthService;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -26,7 +28,9 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 public class Login_Pekerja extends AppCompatActivity {
-
+    String username, status, message;
+    AuthService mAuthAPIService;
+    ProgressDialog progressDialog;
     private GoogleApiClient client;
 
     @Override
@@ -35,7 +39,8 @@ public class Login_Pekerja extends AppCompatActivity {
         setContentView(R.layout.activity_login__pekerja);
         final Activity activity = this;
         Button T_scanpetugas = (Button) findViewById(R.id.b_scanpekerja);
-
+        progressDialog = new ProgressDialog(Login_Pekerja.this);
+        progressDialog.setMessage("Mohon Tunggu");
 
 
         T_scanpetugas.setOnClickListener(new View.OnClickListener() {
