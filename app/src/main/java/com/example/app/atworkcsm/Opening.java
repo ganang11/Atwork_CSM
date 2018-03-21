@@ -47,7 +47,7 @@ public class Opening extends AppCompatActivity {
                     // make first time launch TRUE
                     prefManager.setFirstTimeLaunch(true);
 
-                    startActivity(new Intent(Opening.this, Login_Pekerja.class));
+                    startActivity(new Intent(Opening.this, Masuk_Pekerja.class));
                     finish();
 
 

@@ -1,6 +1,9 @@
 package com.example.app.atworkcsm;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +14,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Cek_Kamar extends AppCompatActivity implements View.OnClickListener {
+
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +60,39 @@ public class Cek_Kamar extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_selesai:
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//                builder.setTitle("Keluar");
+//                builder.setMessage("Apakah Anda Yakin ?");
+//                builder.setNegativeButton("Tidak", null);
+//                builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Intent keluar = new Intent(Cek_Kamar.this, Login_kamar.class);
+//                                startActivity(keluar);
+//
+//                            }
+//                        });
+
                 Intent selesai = new Intent(this, Login_kamar.class);
                 startActivity(selesai);
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+        if (doubleBackToExitPressedOnce){
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this,"Tekan tombol kembali lagi untuk keluar",Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                doubleBackToExitPressedOnce = false;
+            }
+        },2000);
     }
 }
