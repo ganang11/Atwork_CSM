@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_weight="4"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Michelangelo"
             android:textColor="#fff"
             android:textSize="20dp"
             android:id="@+id/petugas"/>
@@ -97,16 +97,7 @@
             android:textSize="20dp"
             android:background="#CED5DD"
             android:textColor="#000"
-            android:text="Y" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="303dp"
-            android:textSize="20dp"
-            android:layout_alignBaseline="@id/L"
-            android:textColor="#000"
-            android:text="T" />
+            android:text="" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -125,275 +116,92 @@
                     android:layout_marginTop="20dp"
                     android:textColor="#000"
                     android:text="A. Kamar Mandi"
-                    android:id="@+id/R2A" />
+                    android:id="@+id/KA" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_A"
-                    android:orientation="horizontal"
-                    android:layout_alignTop="@+id/R2A"
-                    android:layout_alignStart="@+id/RGR2_B">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2A"
-                        android:layout_alignBaseline="@id/R2A"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2A"
-                        android:layout_alignBaseline="@id/R2A"
-                        android:layout_marginStart="25dp"
-                        />
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2A"
+                    android:layout_below="@id/KA"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="B. Sapu Kamar"
-                    android:id="@+id/R2B" />
+                    android:id="@+id/KB" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_B"
-                    android:layout_below="@id/RGR2_A"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="25dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2B"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2B"
-                        android:layout_marginStart="25dp"
-                        />
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2B"
+                    android:layout_below="@id/KB"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="C. Cek Sprei"
-                    android:id="@+id/R2C" />
+                    android:id="@+id/KC" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_C"
-                    android:layout_below="@id/RGR2_B"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2C"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2C"
-                        android:layout_marginStart="25dp"/>
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2C"
+                    android:layout_below="@id/KC"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="D. Pel Kamar"
-                    android:id="@+id/R2D" />
+                    android:id="@+id/KD" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_D"
-                    android:layout_below="@id/RGR2_C"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2D"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2D"
-                        android:layout_marginStart="25dp"/>
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2D"
+                    android:layout_below="@id/KD"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="E. Cek Alat Mandi"
-                    android:id="@+id/R2E" />
+                    android:id="@+id/KE" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_E"
-                    android:layout_below="@id/RGR2_D"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2E"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2E"
-                        android:layout_marginStart="25dp"/>
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2E"
+                    android:layout_below="@id/KE"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="F. Parfum Ruangan"
-                    android:id="@+id/R2F" />
+                    android:id="@+id/KF" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_F"
-                    android:layout_below="@id/RGR2_E"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="25dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2F"
-                        />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2F"
-                        android:layout_marginStart="25dp"/>
-
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2F"
+                    android:layout_below="@id/KF"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="G. Tea and Coffee"
-                    android:id="@+id/R2G" />
+                    android:id="@+id/KG" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_G"
-                    android:layout_below="@id/RGR2_F"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="25dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2G"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2G"
-                        android:layout_marginStart="25dp"/>
-                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
-                    android:layout_below="@id/R2G"
+                    android:layout_below="@id/KG"
                     android:layout_marginTop="30dp"
                     android:textColor="#000"
                     android:text="H. Lap Meja"
-                    android:id="@+id/R2H" />
+                    android:id="@+id/KH" />
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/RGR2_H"
-                    android:layout_below="@id/RGR2_G"
-                    android:layout_marginStart="240dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBL_R2H"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RBTL_R2H"
-                        android:layout_marginStart="25dp"/>
-
-                </RadioGroup>
 
                 <Button
                     android:layout_width="match_parent"
@@ -403,8 +211,71 @@
                     android:textSize="20sp"
                     android:id="@+id/btn_selesai"
                     android:layout_marginBottom="30sp"
-                    android:layout_below="@id/R2H"/>
+                    android:layout_below="@id/KH"/>
 
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSA"
+                    android:layout_alignTop="@+id/KA"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSB"
+                    android:layout_alignTop="@+id/KB"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSC"
+                    android:layout_alignTop="@+id/KC"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSD"
+                    android:layout_alignTop="@+id/KD"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSE"
+                    android:layout_alignTop="@+id/KE"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSF"
+                    android:layout_alignTop="@+id/KF"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSG"
+                    android:layout_alignTop="@+id/KG"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CB_CSH"
+                    android:layout_alignTop="@+id/KH"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp" />
 
             </RelativeLayout>
 
