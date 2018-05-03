@@ -38,7 +38,7 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_masuk__pekerja);
         bLogin = (Button) findViewById(R.id.B_login);
         etUsername = (EditText) findViewById(R.id.ET_username);
-        etPassword = (EditText) findViewById(R.id.ET_password);
+//        etPassword = (EditText) findViewById(R.id.ET_password);
 
         bLogin.setOnClickListener(this);
 
@@ -47,76 +47,78 @@ public class Masuk_Pekerja extends AppCompatActivity implements View.OnClickList
         progressDialog.setMessage("Mohon Tunggu");
     }
 
-    public void loginHandler(final String username, String password) {
-        if (username == null || password == null) {
-            dialogAlert("Masukkan Username dan Password");
-            progressDialog.dismiss();
-        } else {
-            Map<String, Object> jsonParams = new ArrayMap<>();
-            jsonParams.put("u", username);
-            jsonParams.put("p", password);
-
-            mAuthAPIService = ApiUtils.getAuthAPIService();
-
-            Call<ResponseBody> response = mAuthAPIService.loginData(username, password);
-
-            response.enqueue(new Callback<ResponseBody>() {
-                @Override
-                public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> rawResponse) {
-                    if (rawResponse.isSuccessful()) {
-                        try {
-
-                            JSONObject jsonObject = new JSONObject(rawResponse.body().string());
-                            status = jsonObject.getString("status");
-                            message = jsonObject.getString("message");
-
-                            new CountDownTimer(1000, 1000) {
-
-                                public void onTick(long millisUntilFinished) {
-                                    // You don't need anything here
-                                }
-
-                                public void onFinish() {
-                                    sessionManager.setUser(username);
-                                    Toast.makeText(Masuk_Pekerja.this, message,
-                                            Toast.LENGTH_LONG).show();
-                                    progressDialog.dismiss();
-                                    Intent movin = new Intent(Masuk_Pekerja.this, Login_Pekerja.class);
-                                    startActivity(movin);
-                                    finish();
-                                }
-                            }.start();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        dialogAlert("Login Gagal");
-                        progressDialog.dismiss();
-                    }
-
-                }
-
-                @Override
-                public void onFailure(Call<ResponseBody> call, Throwable t) {
-
-                }
-            });
-        }
-    }
-
-    public void dialogAlert(String warn){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Error");
-                builder.setMessage(warn);
-                builder.setNegativeButton("Coba Lagi", null);
-    }
+//    public void loginHandler(final String username, String password) {
+//        if (username == null || password == null) {
+//            dialogAlert("Masukkan Username dan Password");
+//            progressDialog.dismiss();
+//        } else {
+//            Map<String, Object> jsonParams = new ArrayMap<>();
+//            jsonParams.put("u", username);
+//            jsonParams.put("p", password);
+//
+//            mAuthAPIService = ApiUtils.getAuthAPIService();
+//
+//            Call<ResponseBody> response = mAuthAPIService.loginData(username, password);
+//
+//            response.enqueue(new Callback<ResponseBody>() {
+//                @Override
+//                public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> rawResponse) {
+//                    if (rawResponse.isSuccessful()) {
+//                        try {
+//
+//                            JSONObject jsonObject = new JSONObject(rawResponse.body().string());
+//                            status = jsonObject.getString("status");
+//                            message = jsonObject.getString("message");
+//
+//                            new CountDownTimer(1000, 1000) {
+//
+//                                public void onTick(long millisUntilFinished) {
+//                                    // You don't need anything here
+//                                }
+//
+//                                public void onFinish() {
+//                                    sessionManager.setUser(username);
+//                                    Toast.makeText(Masuk_Pekerja.this, message,
+//                                            Toast.LENGTH_LONG).show();
+//                                    progressDialog.dismiss();
+//                                    Intent movin = new Intent(Masuk_Pekerja.this, Login_Pekerja.class);
+//                                    startActivity(movin);
+//                                    finish();
+//                                }
+//                            }.start();
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    } else {
+//                        dialogAlert("Login Gagal");
+//                        progressDialog.dismiss();
+//                    }
+//
+//                }
+//
+//                @Override
+//                public void onFailure(Call<ResponseBody> call, Throwable t) {
+//
+//                }
+//            });
+//        }
+//    }
+//
+//    public void dialogAlert(String warn){
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//                builder.setTitle("Error");
+//                builder.setMessage(warn);
+//                builder.setNegativeButton("Coba Lagi", null);
+//    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.B_login:
-                progressDialog.show();
-                loginHandler(etUsername.getText().toString(), etPassword.getText().toString());
+                Intent movin = new Intent(Masuk_Pekerja.this, Login_Pekerja.class);
+                startActivity(movin);
+//                progressDialog.show();
+//                loginHandler(etUsername.getText().toString(), etPassword.getText().toString());
                 break;
         }
     }

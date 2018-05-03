@@ -10,16 +10,16 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:layout_height="0sp"
             android:id="@+id/logoAtwork"
             android:padding="30sp"
-            android:src="@drawable/logo_atwork"/>
+            android:src="@drawable/logoatwork"/>
 
 
        <LinearLayout
            android:layout_width="wrap_content"
-           android:layout_weight="2"
+           android:layout_weight="5"
            android:layout_height="0sp"
            android:gravity="center"
            android:orientation="vertical"
@@ -32,20 +32,20 @@
             android:textSize="20sp"
             android:paddingStart="10sp"
             android:layout_margin="10sp"
-            android:hint="Username"
+            android:hint="Masukan ID Pegawai"
             android:inputType="text"
              />
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:id="@+id/ET_password"
-            android:textSize="20sp"
-            android:paddingStart="10sp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            />
+        <!--<EditText-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:id="@+id/ET_password"-->
+            <!--android:textSize="20sp"-->
+            <!--android:paddingStart="10sp"-->
+            <!--android:hint="Password"-->
+            <!--android:inputType="textPassword"-->
+            <!--/>-->
 
            <Button
                android:layout_width="wrap_content"
