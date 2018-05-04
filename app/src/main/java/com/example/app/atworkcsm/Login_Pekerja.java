@@ -68,7 +68,7 @@ public class Login_Pekerja extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.b_Activities:
-                Intent Activity = new Intent(Login_Pekerja.this, Cek_Kamar.class);
+                Intent Activity = new Intent(Login_Pekerja.this, Login_kamar.class);
                 startActivity(Activity);
                 break;
 
